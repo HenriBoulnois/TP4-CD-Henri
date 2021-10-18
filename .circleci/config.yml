@@ -47,9 +47,10 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp
+      - run: npm install netlify-cli --save-dev
       - run:
           name: Deploy app
-          command: yarn netlify deploy --prod --auth $NETLIFY_KEY
+          command: yarn netlify deploy --prod --dir=/tmp/server-doc
   back-test-unit:
     <<: *shared-config
     steps:
