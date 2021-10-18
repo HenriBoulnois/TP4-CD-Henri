@@ -49,7 +49,7 @@ jobs:
           at: /tmp
       - run:
           name: Deploy app
-          command: echo todo && false
+          command: yarn netlify deploi --prod --auth $NETLIFY_KEY
   back-test-unit:
     <<: *shared-config
     steps:
