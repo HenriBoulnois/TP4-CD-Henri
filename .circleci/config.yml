@@ -107,7 +107,7 @@ jobs:
       - checkout
       - run:
           name: Heroku Deploy
-          command: git push https://heroku:84a6e6ef-89a6-4750-9073-a451f0b53d29@git.heroku.com/damp-sea-12569.git HEAD:main
+          command: git push https://heroku:$HEROKU_KEY@git.heroku.com/damp-sea-12569.git HEAD:main
       - run:
           name: Smoke Test
           command: | 
